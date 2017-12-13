@@ -14,4 +14,12 @@ public class RomanNumberConverterTest {
 		Assert.assertEquals("I", romanNumber);
 	}
 
+	@Test
+	public void twoToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(1);
+
+		Assert.assertEquals("II", romanNumber);
+	}
+
 }
