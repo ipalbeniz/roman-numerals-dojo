@@ -46,6 +46,14 @@ public class RomanNumberConverterTest {
 		Assert.assertEquals("VI", romanNumber);
 	}
 
+	@Test
+	public void sevenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(7);
+
+		Assert.assertEquals("VII", romanNumber);
+	}
+
 
 
 }
