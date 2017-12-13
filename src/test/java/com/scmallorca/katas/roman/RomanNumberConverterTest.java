@@ -84,13 +84,18 @@ public class RomanNumberConverterTest {
 		givenNumberExpectingRoman(19, "XIX");
 	}
 
+	@Test
+	public void twentyToRoman() {
+
+		givenNumberExpectingRoman(20, "XX");
+	}
+
 	private void givenNumberExpectingRoman(int number, String expectedRomanNumber) {
 
 		String romanNumber = RomanNumberConverter.integerToRomanNumber(number);
 
 		Assert.assertEquals(expectedRomanNumber, romanNumber);
 	}
-
 
 
 }
