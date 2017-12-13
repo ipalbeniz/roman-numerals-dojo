@@ -5,6 +5,7 @@ public class RomanNumberConverter {
 
 	public static final String ONE = "I";
 	public static final String FIVE = "V";
+	public static final String TEN = "X";
 
 	public static String integerToRomanNumber(int number) {
 
@@ -14,8 +15,8 @@ public class RomanNumberConverter {
 			for (int i = 1; i <= number; i++) {
 				roman.append(ONE);
 			}
-		} else if (number == 4) {
-			return ONE + FIVE;
+		} else if (isFour(number) || number == 9) {
+			return ONE + (isFour(number) ? FIVE : TEN);
 		} else if (number == 5) {
 			return FIVE;
 		} else if (number > 5) {
@@ -24,7 +25,10 @@ public class RomanNumberConverter {
 				roman.append(ONE);
 			}
 		}
-
 		return roman.toString();
+	}
+
+	private static boolean isFour(int number) {
+		return number == 4;
 	}
 }
