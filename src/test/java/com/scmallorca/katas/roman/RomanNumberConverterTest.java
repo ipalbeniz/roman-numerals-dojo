@@ -22,4 +22,14 @@ public class RomanNumberConverterTest {
 		Assert.assertEquals("II", romanNumber);
 	}
 
+	@Test
+	public void fourToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(4);
+
+		Assert.assertEquals("IV", romanNumber);
+	}
+
+
+
 }
