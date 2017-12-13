@@ -9,105 +9,86 @@ public class RomanNumberConverterTest {
 	@Test
 	public void oneToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(1);
-
-		Assert.assertEquals("I", romanNumber);
+		givenNumberExpectingRoman(1, "I");
 	}
 
 	@Test
 	public void twoToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(2);
-
-		Assert.assertEquals("II", romanNumber);
+		givenNumberExpectingRoman(2, "II");
 	}
 
 	@Test
 	public void fourToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(4);
-
-		Assert.assertEquals("IV", romanNumber);
+		givenNumberExpectingRoman(4, "IV");
 	}
 
 	@Test
 	public void fiveToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(5);
-
-		Assert.assertEquals("V", romanNumber);
+		givenNumberExpectingRoman(5, "V");
 	}
 
 	@Test
 	public void sixToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(6);
-
-		Assert.assertEquals("VI", romanNumber);
+		givenNumberExpectingRoman(6, "VI");
 	}
 
 	@Test
 	public void sevenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(7);
-
-		Assert.assertEquals("VII", romanNumber);
+		givenNumberExpectingRoman(7, "VII");
 	}
 
 	@Test
 	public void nineToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(9);
-
-		Assert.assertEquals("IX", romanNumber);
+		givenNumberExpectingRoman(9, "IX");
 	}
 
 	@Test
 	public void tenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(10);
-
-		Assert.assertEquals("X", romanNumber);
+		givenNumberExpectingRoman(10, "X");
 	}
 
 	@Test
 	public void elevenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(11);
-
-		Assert.assertEquals("XI", romanNumber);
+		givenNumberExpectingRoman(11, "XI");
 	}
 
 	@Test
 	public void fourteenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(14);
-
-		Assert.assertEquals("XIV", romanNumber);
+		givenNumberExpectingRoman(14, "XIV");
 	}
 
 	@Test
 	public void fifteenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(15);
-
-		Assert.assertEquals("XV", romanNumber);
+		givenNumberExpectingRoman(15, "XV");
 	}
 
 	@Test
 	public void sixteenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(16);
-
-		Assert.assertEquals("XVI", romanNumber);
+		givenNumberExpectingRoman(16, "XVI");
 	}
 
 	@Test
 	public void nineteenToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(19);
+		givenNumberExpectingRoman(19, "XIX");
+	}
 
-		Assert.assertEquals("XIX", romanNumber);
+	private void givenNumberExpectingRoman(int number, String expectedRomanNumber) {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(number);
+
+		Assert.assertEquals(expectedRomanNumber, romanNumber);
 	}
 
 
