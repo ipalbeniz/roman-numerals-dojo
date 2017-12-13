@@ -30,6 +30,14 @@ public class RomanNumberConverterTest {
 		Assert.assertEquals("IV", romanNumber);
 	}
 
+	@Test
+	public void fiveToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(5);
+
+		Assert.assertEquals("V", romanNumber);
+	}
+
 
 
 }
