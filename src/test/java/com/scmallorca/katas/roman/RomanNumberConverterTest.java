@@ -7,9 +7,9 @@ import org.junit.Test;
 public class RomanNumberConverterTest {
 
 	@Test
-	public void oneToRomanNumber() {
+	public void oneToRoman() {
 
-		String romanNumber = RomanNumberConverter.convert(1);
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(1);
 
 		Assert.assertEquals("I", romanNumber);
 	}
