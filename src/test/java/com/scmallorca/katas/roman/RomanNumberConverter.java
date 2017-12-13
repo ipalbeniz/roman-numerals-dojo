@@ -22,11 +22,11 @@ public class RomanNumberConverter {
 				roman.append(ONE);
 			}
 		} else if (isFour(number) || number == 9) {
-			return ONE + (isFour(number) ? FIVE : TEN);
+			roman.append(ONE + (isFour(number) ? FIVE : TEN));
 		} else if (number == 5) {
-			return FIVE;
+			roman.append(FIVE);
 		} else if (number > 5) {
-			roman = new StringBuilder(FIVE);
+			roman.append(FIVE);
 			for (int i = 6; i <= number; i++) {
 				roman.append(ONE);
 			}
