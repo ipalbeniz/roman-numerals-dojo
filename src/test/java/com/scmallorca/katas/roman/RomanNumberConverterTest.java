@@ -17,7 +17,7 @@ public class RomanNumberConverterTest {
 	@Test
 	public void twoToRoman() {
 
-		String romanNumber = RomanNumberConverter.integerToRomanNumber(1);
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(2);
 
 		Assert.assertEquals("II", romanNumber);
 	}

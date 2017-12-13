@@ -6,6 +6,13 @@ public class RomanNumberConverter {
 	public static final String ONE = "I";
 
 	public static String integerToRomanNumber(int number) {
-		return ONE;
+
+		String roman = "";
+
+		for (int i = 1; i <= number; i++) {
+			roman += ONE;
+		}
+
+		return roman;
 	}
 }
