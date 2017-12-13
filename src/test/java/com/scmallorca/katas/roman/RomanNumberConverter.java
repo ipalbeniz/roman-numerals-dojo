@@ -8,20 +8,23 @@ public class RomanNumberConverter {
 
 	public static String integerToRomanNumber(int number) {
 
-		String roman = "";
+		StringBuilder roman = new StringBuilder();
 
 		if (number < 4) {
 			for (int i = 1; i <= number; i++) {
-				roman += ONE;
+				roman.append(ONE);
 			}
 		} else if (number == 4) {
 			return ONE + FIVE;
 		} else if (number == 5) {
 			return FIVE;
 		} else if (number > 5) {
-			return FIVE + ONE;
+			roman = new StringBuilder(FIVE);
+			for (int i = 6; i <= number; i++) {
+				roman.append(ONE);
+			}
 		}
 
-		return roman;
+		return roman.toString();
 	}
 }
