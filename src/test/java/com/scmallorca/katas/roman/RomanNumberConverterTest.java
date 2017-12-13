@@ -70,6 +70,46 @@ public class RomanNumberConverterTest {
 		Assert.assertEquals("X", romanNumber);
 	}
 
+	@Test
+	public void elevenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(11);
+
+		Assert.assertEquals("XI", romanNumber);
+	}
+
+	@Test
+	public void fourteenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(14);
+
+		Assert.assertEquals("XIV", romanNumber);
+	}
+
+	@Test
+	public void fifteenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(15);
+
+		Assert.assertEquals("XV", romanNumber);
+	}
+
+	@Test
+	public void sixteenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(16);
+
+		Assert.assertEquals("XVI", romanNumber);
+	}
+
+	@Test
+	public void nineteenToRoman() {
+
+		String romanNumber = RomanNumberConverter.integerToRomanNumber(19);
+
+		Assert.assertEquals("XIX", romanNumber);
+	}
+
 
 
 }

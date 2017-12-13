@@ -5,11 +5,17 @@ public class RomanNumberConverter {
 
 	public static final String ONE = "I";
 	public static final String FIVE = "V";
+
 	public static final String TEN = "X";
 
 	public static String integerToRomanNumber(int number) {
 
 		StringBuilder roman = new StringBuilder();
+
+		if (number >= 10) {
+			roman.append(TEN);
+			number -= 10;
+		}
 
 		if (number < 4) {
 			for (int i = 1; i <= number; i++) {
@@ -25,6 +31,7 @@ public class RomanNumberConverter {
 				roman.append(ONE);
 			}
 		}
+
 		return roman.toString();
 	}
 
