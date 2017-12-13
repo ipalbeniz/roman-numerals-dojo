@@ -10,12 +10,14 @@ public class RomanNumberConverter {
 
 		String roman = "";
 
-		if (number == 4) {
+		if (number < 4) {
+			for (int i = 1; i <= number; i++) {
+				roman += ONE;
+			}
+		} else if (number == 4) {
 			return ONE + FIVE;
-		}
-
-		for (int i = 1; i <= number; i++) {
-			roman += ONE;
+		} else if (number == 5) {
+			return FIVE;
 		}
 
 		return roman;
