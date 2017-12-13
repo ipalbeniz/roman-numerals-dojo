@@ -18,6 +18,8 @@ public class RomanNumberConverter {
 			return ONE + FIVE;
 		} else if (number == 5) {
 			return FIVE;
+		} else if (number > 5) {
+			return FIVE + ONE;
 		}
 
 		return roman;
